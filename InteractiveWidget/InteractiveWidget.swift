@@ -38,15 +38,24 @@ struct InteractiveWidgetEntryView : View {
     Text("\(singleNumber)")
       .font(.system(size: 100, design: .serif))
       .foregroundStyle(.blue)
+//      .monospacedDigit()
       .contentTransition(.numericText())
       .frame(maxWidth: .infinity, maxHeight: .infinity)
       .overlay(alignment: .bottomLeading) {
-        Circle()
-          .frame(width: 30, height: 30)
+        Button(intent: NumberUpIntent()) {
+          Image(systemName: "plus")
+            .frame(width: 20, height: 20)
+        }
+        .buttonBorderShape(.circle)
+        .padding(8)
       }
       .overlay(alignment: .bottomTrailing) {
-        Circle()
-          .frame(width: 30, height: 30)
+        Button(intent: NumberDownIntent()) {
+          Image(systemName: "minus")
+            .frame(width: 20, height: 20)
+        }
+        .buttonBorderShape(.circle)
+        .padding(8)
       }
   }
 }
@@ -61,6 +70,7 @@ struct InteractiveWidget: Widget {
     }
     .configurationDisplayName("Let's Swift!")
     .description("앱의 경계를 넘다: Interactive Widget")
+    .contentMarginsDisabled()
   }
 }
 
