@@ -6,17 +6,18 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		C1E5D9732CCA886500B372C9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C1E5D96E2CCA886500B372C9 /* Assets.xcassets */; };
+		C1E5D9742CCA886500B372C9 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1E5D96F2CCA886500B372C9 /* ContentView.swift */; };
+		C1E5D9762CCA886500B372C9 /* LetsSwiftWidgetApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1E5D9712CCA886500B372C9 /* LetsSwiftWidgetApp.swift */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXFileReference section */
 		C1E5D95B2CCA884500B372C9 /* LetsSwiftWidget.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LetsSwiftWidget.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		C1E5D96E2CCA886500B372C9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		C1E5D96F2CCA886500B372C9 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		C1E5D9712CCA886500B372C9 /* LetsSwiftWidgetApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LetsSwiftWidgetApp.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
-
-/* Begin PBXFileSystemSynchronizedRootGroup section */
-		C1E5D95D2CCA884500B372C9 /* LetsSwiftWidget */ = {
-			isa = PBXFileSystemSynchronizedRootGroup;
-			path = LetsSwiftWidget;
-			sourceTree = "<group>";
-		};
-/* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		C1E5D9582CCA884500B372C9 /* Frameworks */ = {
@@ -32,7 +33,7 @@
 		C1E5D9522CCA884500B372C9 = {
 			isa = PBXGroup;
 			children = (
-				C1E5D95D2CCA884500B372C9 /* LetsSwiftWidget */,
+				C1E5D9722CCA886500B372C9 /* LetsSwiftWidget */,
 				C1E5D95C2CCA884500B372C9 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -43,6 +44,16 @@
 				C1E5D95B2CCA884500B372C9 /* LetsSwiftWidget.app */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		C1E5D9722CCA886500B372C9 /* LetsSwiftWidget */ = {
+			isa = PBXGroup;
+			children = (
+				C1E5D9712CCA886500B372C9 /* LetsSwiftWidgetApp.swift */,
+				C1E5D96F2CCA886500B372C9 /* ContentView.swift */,
+				C1E5D96E2CCA886500B372C9 /* Assets.xcassets */,
+			);
+			path = LetsSwiftWidget;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -59,9 +70,6 @@
 			buildRules = (
 			);
 			dependencies = (
-			);
-			fileSystemSynchronizedGroups = (
-				C1E5D95D2CCA884500B372C9 /* LetsSwiftWidget */,
 			);
 			name = LetsSwiftWidget;
 			packageProductDependencies = (
@@ -109,6 +117,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C1E5D9732CCA886500B372C9 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -119,6 +128,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C1E5D9742CCA886500B372C9 /* ContentView.swift in Sources */,
+				C1E5D9762CCA886500B372C9 /* LetsSwiftWidgetApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -251,7 +262,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"LetsSwiftWidget/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "";
 				DEVELOPMENT_TEAM = A5LBYGCGKX;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -260,6 +271,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -280,7 +292,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"LetsSwiftWidget/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "";
 				DEVELOPMENT_TEAM = A5LBYGCGKX;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -289,6 +301,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
