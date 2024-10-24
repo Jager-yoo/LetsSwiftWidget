@@ -6,16 +6,19 @@
 //
 
 import SwiftUI
-import SwiftData
+import WidgetKit
 
 struct ContentView: View {
 
-  @AppStorage("singleNumber") private var singleNumber: Int = .zero
+  @AppStorage("singleNumber", store: .shared) private var singleNumber: Int = .zero
+  @Environment(\.scenePhase) private var scenePhase
 
   var body: some View {
     VStack {
       GroupBox("@AppStorage 저장된 숫자") {
         Text("\(singleNumber)")
+          .font(.system(size: 100, design: .serif))
+          .foregroundStyle(.blue)
       }
       .font(.largeTitle)
       
@@ -24,6 +27,12 @@ struct ContentView: View {
         Button("DOWN!", action: { singleNumber -= 1 })
       }
       .buttonStyle(.borderedProminent)
+    }
+    .onChange(of: scenePhase) { _, newValue in
+      if newValue == .background {
+        // BG 로 갈 때 위젯 리프레시
+        WidgetCenter.shared.reloadAllTimelines()
+      }
     }
   }
 }
