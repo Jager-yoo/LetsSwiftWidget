@@ -16,6 +16,7 @@ struct NumberUpIntent: AppIntent {
 
   func perform() async throws -> some ProvidesDialog {
     singleNumber += 1
+    // WidgetCenter.shared.reloadAllTimelines() // '디버그' 환경에서만 작동
     return .result(dialog: IntentDialog("숫자를 올렸어요: \(singleNumber)"))
   }
 }
@@ -28,6 +29,7 @@ struct NumberDownIntent: AppIntent {
 
   func perform() async throws -> some ProvidesDialog {
     singleNumber -= 1
+    // WidgetCenter.shared.reloadAllTimelines() // '디버그' 환경에서만 작동
     return .result(dialog: IntentDialog("숫자를 내렸어요: \(singleNumber)"))
   }
 }

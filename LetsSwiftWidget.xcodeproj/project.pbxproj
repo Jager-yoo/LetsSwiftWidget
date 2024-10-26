@@ -20,6 +20,8 @@
 		C1E5D9B62CCA97A900B372C9 /* SharedUserDefaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1E5D9782CCA904800B372C9 /* SharedUserDefaults.swift */; };
 		C1E5D9BC2CCAA6EA00B372C9 /* NumberIntents.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1E5D9BB2CCAA6EA00B372C9 /* NumberIntents.swift */; };
 		C1E5D9BD2CCAA6EA00B372C9 /* NumberIntents.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1E5D9BB2CCAA6EA00B372C9 /* NumberIntents.swift */; };
+		C1E5D9C12CCCDB1F00B372C9 /* CustomTransitionEffect.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1E5D9C02CCCDB1F00B372C9 /* CustomTransitionEffect.swift */; };
+		C1E5D9C22CCCDB1F00B372C9 /* CustomTransitionEffect.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1E5D9C02CCCDB1F00B372C9 /* CustomTransitionEffect.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -62,6 +64,7 @@
 		C1E5D9B02CCA933100B372C9 /* InteractiveWidgetBundle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InteractiveWidgetBundle.swift; sourceTree = "<group>"; };
 		C1E5D9B72CCA984700B372C9 /* InteractiveWidgetExtension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = InteractiveWidgetExtension.entitlements; sourceTree = "<group>"; };
 		C1E5D9BB2CCAA6EA00B372C9 /* NumberIntents.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NumberIntents.swift; sourceTree = "<group>"; };
+		C1E5D9C02CCCDB1F00B372C9 /* CustomTransitionEffect.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTransitionEffect.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -110,6 +113,7 @@
 				C1E5D96F2CCA886500B372C9 /* ContentView.swift */,
 				C1E5D9782CCA904800B372C9 /* SharedUserDefaults.swift */,
 				C1E5D9BB2CCAA6EA00B372C9 /* NumberIntents.swift */,
+				C1E5D9C02CCCDB1F00B372C9 /* CustomTransitionEffect.swift */,
 				C1E5D9772CCA8F8900B372C9 /* LetsSwiftWidget.entitlements */,
 				C1E5D96E2CCA886500B372C9 /* Assets.xcassets */,
 			);
@@ -246,6 +250,7 @@
 				C1E5D9762CCA886500B372C9 /* LetsSwiftWidgetApp.swift in Sources */,
 				C1E5D9792CCA904800B372C9 /* SharedUserDefaults.swift in Sources */,
 				C1E5D9BC2CCAA6EA00B372C9 /* NumberIntents.swift in Sources */,
+				C1E5D9C12CCCDB1F00B372C9 /* CustomTransitionEffect.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -257,6 +262,7 @@
 				C1E5D9B62CCA97A900B372C9 /* SharedUserDefaults.swift in Sources */,
 				C1E5D9B32CCA933100B372C9 /* InteractiveWidgetBundle.swift in Sources */,
 				C1E5D9BD2CCAA6EA00B372C9 /* NumberIntents.swift in Sources */,
+				C1E5D9C22CCCDB1F00B372C9 /* CustomTransitionEffect.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

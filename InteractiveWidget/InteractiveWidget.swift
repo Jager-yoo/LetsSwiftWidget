@@ -29,7 +29,7 @@ struct SimpleEntry: TimelineEntry {
   let date: Date
 }
 
-struct InteractiveWidgetEntryView : View {
+struct InteractiveWidgetView: View {
   let entry: Provider.Entry
   
   @AppStorage("singleNumber", store: .shared) private var singleNumber: Int = .zero
@@ -38,10 +38,12 @@ struct InteractiveWidgetEntryView : View {
     Text("\(singleNumber)")
       .font(.system(size: 100, design: .serif))
       .foregroundStyle(.blue)
-//      .monospacedDigit()
-      .contentTransition(.numericText())
+      // .monospacedDigit() // 글자 흔들리는 걸 막고 싶다면
+      .contentTransition(
+        .numericText(value: Double(singleNumber))
+      )
       .frame(maxWidth: .infinity, maxHeight: .infinity)
-      .overlay(alignment: .bottomLeading) {
+      .overlay(alignment: .bottomTrailing) {
         Button(intent: NumberUpIntent()) {
           Image(systemName: "plus")
             .frame(width: 20, height: 20)
@@ -49,7 +51,7 @@ struct InteractiveWidgetEntryView : View {
         .buttonBorderShape(.circle)
         .padding(8)
       }
-      .overlay(alignment: .bottomTrailing) {
+      .overlay(alignment: .bottomLeading) {
         Button(intent: NumberDownIntent()) {
           Image(systemName: "minus")
             .frame(width: 20, height: 20)
@@ -58,6 +60,12 @@ struct InteractiveWidgetEntryView : View {
         .padding(8)
       }
   }
+
+  private var timer: some View {
+    Text(entry.date, style: .relative)
+      .font(.system(size: 60, design: .serif))
+      .multilineTextAlignment(.center)
+  }
 }
 
 struct InteractiveWidget: Widget {
@@ -65,7 +73,7 @@ struct InteractiveWidget: Widget {
 
   var body: some WidgetConfiguration {
     StaticConfiguration(kind: kind, provider: Provider()) { entry in
-      InteractiveWidgetEntryView(entry: entry)
+      InteractiveWidgetView(entry: entry)
         .containerBackground(.fill.quinary, for: .widget)
     }
     .configurationDisplayName("Let's Swift!")

@@ -19,6 +19,8 @@ struct ContentView: View {
         Text("\(singleNumber)")
           .font(.system(size: 100, design: .serif))
           .foregroundStyle(.blue)
+          .transition(.flipClockTransition.animation(.default))
+          .id(singleNumber)
       }
       .font(.largeTitle)
       
