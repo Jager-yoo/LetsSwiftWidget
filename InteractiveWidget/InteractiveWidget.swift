@@ -35,35 +35,57 @@ struct InteractiveWidgetView: View {
   @AppStorage("singleNumber", store: .shared) private var singleNumber: Int = .zero
   
   var body: some View {
-    Text("\(singleNumber)")
-      .font(.system(size: 100, design: .serif))
-      .foregroundStyle(.blue)
-      // .monospacedDigit() // 글자 흔들리는 걸 막고 싶다면
-      .contentTransition(
-        .numericText(value: Double(singleNumber))
-      )
+    if WidgetTransition.shared.showsResult {
+      Button(intent: ResetIntent()) {
+        ZStack {
+          Color.green.opacity(0.5)
+
+          VStack {
+            Text("숫자 변경 성공")
+
+            Text("It's **'\(singleNumber)'** now")
+              .font(.system(size: 30, design: .rounded))
+          }
+        }
+      }
+      .buttonStyle(.plain)
       .frame(maxWidth: .infinity, maxHeight: .infinity)
-      .overlay(alignment: .bottomTrailing) {
-        Button(intent: NumberUpIntent()) {
-          Image(systemName: "plus")
-            .frame(width: 20, height: 20)
+      .transition(.blurReplace)
+    } else {
+      Text("\(singleNumber)")
+        .font(.system(size: 100, design: .rounded))
+        .foregroundStyle(.blue)
+        .invalidatableContent()
+        // .monospacedDigit() // 글자 흔들리는 걸 막고 싶다면
+        .contentTransition(
+          .numericText(value: Double(singleNumber))
+        )
+        .frame(maxWidth: .infinity, maxHeight: .infinity)
+        .overlay(alignment: .top) {
+          timer
         }
-        .buttonBorderShape(.circle)
-        .padding(8)
-      }
-      .overlay(alignment: .bottomLeading) {
-        Button(intent: NumberDownIntent()) {
-          Image(systemName: "minus")
-            .frame(width: 20, height: 20)
+        .overlay(alignment: .bottomTrailing) {
+          Button(intent: NumberUpIntent()) {
+            Image(systemName: "plus")
+              .frame(width: 20, height: 20)
+          }
+          .buttonBorderShape(.circle)
+          .padding(8)
         }
-        .buttonBorderShape(.circle)
-        .padding(8)
-      }
+        .overlay(alignment: .bottomLeading) {
+          Toggle(isOn: false, intent: NumberDownIntent()) {
+            Image(systemName: "minus")
+              .frame(width: 20, height: 20)
+          }
+          .buttonBorderShape(.circle)
+          .padding(8)
+        }
+    }
   }
 
   private var timer: some View {
     Text(entry.date, style: .relative)
-      .font(.system(size: 60, design: .serif))
+      .font(.system(size: 20, design: .rounded))
       .multilineTextAlignment(.center)
   }
 }

@@ -22,6 +22,10 @@
 		C1E5D9BD2CCAA6EA00B372C9 /* NumberIntents.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1E5D9BB2CCAA6EA00B372C9 /* NumberIntents.swift */; };
 		C1E5D9C12CCCDB1F00B372C9 /* CustomTransitionEffect.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1E5D9C02CCCDB1F00B372C9 /* CustomTransitionEffect.swift */; };
 		C1E5D9C22CCCDB1F00B372C9 /* CustomTransitionEffect.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1E5D9C02CCCDB1F00B372C9 /* CustomTransitionEffect.swift */; };
+		C1FDB8472CDFC99C0030D633 /* IntentError.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1FDB8462CDFC99C0030D633 /* IntentError.swift */; };
+		C1FDB8482CDFC99C0030D633 /* IntentError.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1FDB8462CDFC99C0030D633 /* IntentError.swift */; };
+		C1FDB84A2CE86F040030D633 /* WidgetTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1FDB8492CE86F040030D633 /* WidgetTransition.swift */; };
+		C1FDB84B2CE86F040030D633 /* WidgetTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1FDB8492CE86F040030D633 /* WidgetTransition.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -65,6 +69,8 @@
 		C1E5D9B72CCA984700B372C9 /* InteractiveWidgetExtension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = InteractiveWidgetExtension.entitlements; sourceTree = "<group>"; };
 		C1E5D9BB2CCAA6EA00B372C9 /* NumberIntents.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NumberIntents.swift; sourceTree = "<group>"; };
 		C1E5D9C02CCCDB1F00B372C9 /* CustomTransitionEffect.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTransitionEffect.swift; sourceTree = "<group>"; };
+		C1FDB8462CDFC99C0030D633 /* IntentError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntentError.swift; sourceTree = "<group>"; };
+		C1FDB8492CE86F040030D633 /* WidgetTransition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WidgetTransition.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -112,8 +118,8 @@
 				C1E5D9712CCA886500B372C9 /* LetsSwiftWidgetApp.swift */,
 				C1E5D96F2CCA886500B372C9 /* ContentView.swift */,
 				C1E5D9782CCA904800B372C9 /* SharedUserDefaults.swift */,
-				C1E5D9BB2CCAA6EA00B372C9 /* NumberIntents.swift */,
 				C1E5D9C02CCCDB1F00B372C9 /* CustomTransitionEffect.swift */,
+				C1FDB84C2CE86F470030D633 /* Intents */,
 				C1E5D9772CCA8F8900B372C9 /* LetsSwiftWidget.entitlements */,
 				C1E5D96E2CCA886500B372C9 /* Assets.xcassets */,
 			);
@@ -134,11 +140,21 @@
 			children = (
 				C1E5D9B02CCA933100B372C9 /* InteractiveWidgetBundle.swift */,
 				C1E5D9AF2CCA933100B372C9 /* InteractiveWidget.swift */,
+				C1FDB8492CE86F040030D633 /* WidgetTransition.swift */,
 				C1E5D9AE2CCA933100B372C9 /* Info.plist */,
 				C1E5D9B72CCA984700B372C9 /* InteractiveWidgetExtension.entitlements */,
 				C1E5D9AD2CCA933100B372C9 /* Assets.xcassets */,
 			);
 			path = InteractiveWidget;
+			sourceTree = "<group>";
+		};
+		C1FDB84C2CE86F470030D633 /* Intents */ = {
+			isa = PBXGroup;
+			children = (
+				C1E5D9BB2CCAA6EA00B372C9 /* NumberIntents.swift */,
+				C1FDB8462CDFC99C0030D633 /* IntentError.swift */,
+			);
+			path = Intents;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -248,9 +264,11 @@
 			files = (
 				C1E5D9742CCA886500B372C9 /* ContentView.swift in Sources */,
 				C1E5D9762CCA886500B372C9 /* LetsSwiftWidgetApp.swift in Sources */,
+				C1FDB8482CDFC99C0030D633 /* IntentError.swift in Sources */,
 				C1E5D9792CCA904800B372C9 /* SharedUserDefaults.swift in Sources */,
 				C1E5D9BC2CCAA6EA00B372C9 /* NumberIntents.swift in Sources */,
 				C1E5D9C12CCCDB1F00B372C9 /* CustomTransitionEffect.swift in Sources */,
+				C1FDB84B2CE86F040030D633 /* WidgetTransition.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -260,9 +278,11 @@
 			files = (
 				C1E5D9B22CCA933100B372C9 /* InteractiveWidget.swift in Sources */,
 				C1E5D9B62CCA97A900B372C9 /* SharedUserDefaults.swift in Sources */,
+				C1FDB8472CDFC99C0030D633 /* IntentError.swift in Sources */,
 				C1E5D9B32CCA933100B372C9 /* InteractiveWidgetBundle.swift in Sources */,
 				C1E5D9BD2CCAA6EA00B372C9 /* NumberIntents.swift in Sources */,
 				C1E5D9C22CCCDB1F00B372C9 /* CustomTransitionEffect.swift in Sources */,
+				C1FDB84A2CE86F040030D633 /* WidgetTransition.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
