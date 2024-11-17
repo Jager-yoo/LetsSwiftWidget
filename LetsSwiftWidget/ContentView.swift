@@ -17,7 +17,7 @@ struct ContentView: View {
     VStack {
       GroupBox("@AppStorage 저장된 숫자") {
         Text("\(singleNumber)")
-          .font(.system(size: 100, design: .serif))
+          .font(.system(size: 100, design: .rounded))
           .foregroundStyle(.blue)
           .transition(.flipClockTransition.animation(.default))
           .id(singleNumber)

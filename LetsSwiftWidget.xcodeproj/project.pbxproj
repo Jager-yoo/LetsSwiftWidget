@@ -24,8 +24,18 @@
 		C1E5D9C22CCCDB1F00B372C9 /* CustomTransitionEffect.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1E5D9C02CCCDB1F00B372C9 /* CustomTransitionEffect.swift */; };
 		C1FDB8472CDFC99C0030D633 /* IntentError.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1FDB8462CDFC99C0030D633 /* IntentError.swift */; };
 		C1FDB8482CDFC99C0030D633 /* IntentError.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1FDB8462CDFC99C0030D633 /* IntentError.swift */; };
-		C1FDB84A2CE86F040030D633 /* WidgetTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1FDB8492CE86F040030D633 /* WidgetTransition.swift */; };
-		C1FDB84B2CE86F040030D633 /* WidgetTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1FDB8492CE86F040030D633 /* WidgetTransition.swift */; };
+		C1FDB84E2CE876EE0030D633 /* SoundPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1FDB84D2CE876EE0030D633 /* SoundPlayer.swift */; };
+		C1FDB84F2CE876EE0030D633 /* SoundPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1FDB84D2CE876EE0030D633 /* SoundPlayer.swift */; };
+		C1FDB8522CE8776D0030D633 /* click-sound.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = C1FDB8512CE8776D0030D633 /* click-sound.mp3 */; };
+		C1FDB8532CE8776D0030D633 /* click-sound.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = C1FDB8512CE8776D0030D633 /* click-sound.mp3 */; };
+		C1FDB8582CE87D870030D633 /* water-beep.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = C1FDB8572CE87D870030D633 /* water-beep.mp3 */; };
+		C1FDB8592CE87D870030D633 /* notification-beep.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = C1FDB8562CE87D870030D633 /* notification-beep.mp3 */; };
+		C1FDB85A2CE87D870030D633 /* call-to-attention.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = C1FDB8542CE87D870030D633 /* call-to-attention.mp3 */; };
+		C1FDB85B2CE87D870030D633 /* level-up.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = C1FDB8552CE87D870030D633 /* level-up.mp3 */; };
+		C1FDB85C2CE87D870030D633 /* water-beep.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = C1FDB8572CE87D870030D633 /* water-beep.mp3 */; };
+		C1FDB85D2CE87D870030D633 /* notification-beep.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = C1FDB8562CE87D870030D633 /* notification-beep.mp3 */; };
+		C1FDB85E2CE87D870030D633 /* call-to-attention.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = C1FDB8542CE87D870030D633 /* call-to-attention.mp3 */; };
+		C1FDB85F2CE87D870030D633 /* level-up.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = C1FDB8552CE87D870030D633 /* level-up.mp3 */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -70,7 +80,13 @@
 		C1E5D9BB2CCAA6EA00B372C9 /* NumberIntents.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NumberIntents.swift; sourceTree = "<group>"; };
 		C1E5D9C02CCCDB1F00B372C9 /* CustomTransitionEffect.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTransitionEffect.swift; sourceTree = "<group>"; };
 		C1FDB8462CDFC99C0030D633 /* IntentError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntentError.swift; sourceTree = "<group>"; };
-		C1FDB8492CE86F040030D633 /* WidgetTransition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WidgetTransition.swift; sourceTree = "<group>"; };
+		C1FDB84D2CE876EE0030D633 /* SoundPlayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoundPlayer.swift; sourceTree = "<group>"; };
+		C1FDB8512CE8776D0030D633 /* click-sound.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "click-sound.mp3"; sourceTree = "<group>"; };
+		C1FDB8542CE87D870030D633 /* call-to-attention.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "call-to-attention.mp3"; sourceTree = "<group>"; };
+		C1FDB8552CE87D870030D633 /* level-up.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "level-up.mp3"; sourceTree = "<group>"; };
+		C1FDB8562CE87D870030D633 /* notification-beep.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "notification-beep.mp3"; sourceTree = "<group>"; };
+		C1FDB8572CE87D870030D633 /* water-beep.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "water-beep.mp3"; sourceTree = "<group>"; };
+		C1FDB8602CE884DB0030D633 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -115,11 +131,13 @@
 		C1E5D9722CCA886500B372C9 /* LetsSwiftWidget */ = {
 			isa = PBXGroup;
 			children = (
+				C1FDB8602CE884DB0030D633 /* Info.plist */,
 				C1E5D9712CCA886500B372C9 /* LetsSwiftWidgetApp.swift */,
 				C1E5D96F2CCA886500B372C9 /* ContentView.swift */,
 				C1E5D9782CCA904800B372C9 /* SharedUserDefaults.swift */,
 				C1E5D9C02CCCDB1F00B372C9 /* CustomTransitionEffect.swift */,
 				C1FDB84C2CE86F470030D633 /* Intents */,
+				C1FDB8502CE8770D0030D633 /* Sounds */,
 				C1E5D9772CCA8F8900B372C9 /* LetsSwiftWidget.entitlements */,
 				C1E5D96E2CCA886500B372C9 /* Assets.xcassets */,
 			);
@@ -140,7 +158,6 @@
 			children = (
 				C1E5D9B02CCA933100B372C9 /* InteractiveWidgetBundle.swift */,
 				C1E5D9AF2CCA933100B372C9 /* InteractiveWidget.swift */,
-				C1FDB8492CE86F040030D633 /* WidgetTransition.swift */,
 				C1E5D9AE2CCA933100B372C9 /* Info.plist */,
 				C1E5D9B72CCA984700B372C9 /* InteractiveWidgetExtension.entitlements */,
 				C1E5D9AD2CCA933100B372C9 /* Assets.xcassets */,
@@ -155,6 +172,19 @@
 				C1FDB8462CDFC99C0030D633 /* IntentError.swift */,
 			);
 			path = Intents;
+			sourceTree = "<group>";
+		};
+		C1FDB8502CE8770D0030D633 /* Sounds */ = {
+			isa = PBXGroup;
+			children = (
+				C1FDB84D2CE876EE0030D633 /* SoundPlayer.swift */,
+				C1FDB8542CE87D870030D633 /* call-to-attention.mp3 */,
+				C1FDB8552CE87D870030D633 /* level-up.mp3 */,
+				C1FDB8562CE87D870030D633 /* notification-beep.mp3 */,
+				C1FDB8572CE87D870030D633 /* water-beep.mp3 */,
+				C1FDB8512CE8776D0030D633 /* click-sound.mp3 */,
+			);
+			path = Sounds;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -243,7 +273,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C1FDB85C2CE87D870030D633 /* water-beep.mp3 in Resources */,
+				C1FDB85D2CE87D870030D633 /* notification-beep.mp3 in Resources */,
+				C1FDB85E2CE87D870030D633 /* call-to-attention.mp3 in Resources */,
+				C1FDB85F2CE87D870030D633 /* level-up.mp3 in Resources */,
 				C1E5D9732CCA886500B372C9 /* Assets.xcassets in Resources */,
+				C1FDB8532CE8776D0030D633 /* click-sound.mp3 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -251,7 +286,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C1FDB8582CE87D870030D633 /* water-beep.mp3 in Resources */,
+				C1FDB8592CE87D870030D633 /* notification-beep.mp3 in Resources */,
+				C1FDB85A2CE87D870030D633 /* call-to-attention.mp3 in Resources */,
+				C1FDB85B2CE87D870030D633 /* level-up.mp3 in Resources */,
 				C1E5D9B42CCA933100B372C9 /* Assets.xcassets in Resources */,
+				C1FDB8522CE8776D0030D633 /* click-sound.mp3 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -264,11 +304,11 @@
 			files = (
 				C1E5D9742CCA886500B372C9 /* ContentView.swift in Sources */,
 				C1E5D9762CCA886500B372C9 /* LetsSwiftWidgetApp.swift in Sources */,
+				C1FDB84E2CE876EE0030D633 /* SoundPlayer.swift in Sources */,
 				C1FDB8482CDFC99C0030D633 /* IntentError.swift in Sources */,
 				C1E5D9792CCA904800B372C9 /* SharedUserDefaults.swift in Sources */,
 				C1E5D9BC2CCAA6EA00B372C9 /* NumberIntents.swift in Sources */,
 				C1E5D9C12CCCDB1F00B372C9 /* CustomTransitionEffect.swift in Sources */,
-				C1FDB84B2CE86F040030D633 /* WidgetTransition.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -278,11 +318,11 @@
 			files = (
 				C1E5D9B22CCA933100B372C9 /* InteractiveWidget.swift in Sources */,
 				C1E5D9B62CCA97A900B372C9 /* SharedUserDefaults.swift in Sources */,
+				C1FDB84F2CE876EE0030D633 /* SoundPlayer.swift in Sources */,
 				C1FDB8472CDFC99C0030D633 /* IntentError.swift in Sources */,
 				C1E5D9B32CCA933100B372C9 /* InteractiveWidgetBundle.swift in Sources */,
 				C1E5D9BD2CCAA6EA00B372C9 /* NumberIntents.swift in Sources */,
 				C1E5D9C22CCCDB1F00B372C9 /* CustomTransitionEffect.swift in Sources */,
-				C1FDB84A2CE86F040030D633 /* WidgetTransition.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -428,6 +468,7 @@
 				DEVELOPMENT_TEAM = A5LBYGCGKX;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = LetsSwiftWidget/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -459,6 +500,7 @@
 				DEVELOPMENT_TEAM = A5LBYGCGKX;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = LetsSwiftWidget/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;

@@ -33,9 +33,10 @@ struct InteractiveWidgetView: View {
   let entry: Provider.Entry
   
   @AppStorage("singleNumber", store: .shared) private var singleNumber: Int = .zero
-  
+  @AppStorage("widgetShowsResult", store: .shared) var widgetShowsResult: Bool = false
+
   var body: some View {
-    if WidgetTransition.shared.showsResult {
+    if widgetShowsResult {
       Button(intent: ResetIntent()) {
         ZStack {
           Color.green.opacity(0.5)
@@ -44,7 +45,7 @@ struct InteractiveWidgetView: View {
             Text("숫자 변경 성공")
 
             Text("It's **'\(singleNumber)'** now")
-              .font(.system(size: 30, design: .rounded))
+              .font(.system(size: 26, design: .rounded))
           }
         }
       }
