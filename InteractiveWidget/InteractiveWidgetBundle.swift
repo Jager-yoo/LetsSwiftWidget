@@ -13,5 +13,6 @@ struct InteractiveWidgetBundle: WidgetBundle {
   
   var body: some Widget {
     InteractiveWidget()
+    InteractiveLockScreenWidget()
   }
 }
