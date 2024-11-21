@@ -72,6 +72,10 @@ struct InteractiveWidgetView: View {
           }
           .buttonBorderShape(.circle)
           .padding(8)
+          .overlay(alignment: .bottom) {
+            Text("Button")
+              .font(.caption)
+          }
         }
         .overlay(alignment: .bottomLeading) {
           Toggle(isOn: false, intent: NumberDownIntent()) {
@@ -80,7 +84,12 @@ struct InteractiveWidgetView: View {
           }
           .buttonBorderShape(.circle)
           .padding(8)
+          .overlay(alignment: .bottom) {
+            Text("Toggle")
+              .font(.caption)
+          }
         }
+        .sensoryFeedback(.impact, trigger: singleNumber) // 작동 ❌
     }
   }
 
@@ -122,12 +131,11 @@ struct LockScreenWidgetView: View {
             .frame(width: 20, height: 20)
         }
         .buttonBorderShape(.circle)
-        .padding(4)
 
         Spacer()
 
         Text("\(singleNumber)")
-          .font(.system(size: 32, design: .rounded))
+          .font(.system(size: 30, design: .rounded))
           .invalidatableContent()
           .contentTransition(
             .numericText(value: Double(singleNumber))
@@ -140,8 +148,8 @@ struct LockScreenWidgetView: View {
             .frame(width: 20, height: 20)
         }
         .buttonBorderShape(.circle)
-        .padding(4)
       }
+      .sensoryFeedback(.impact, trigger: singleNumber) // 작동 ❌
     }
   }
 }

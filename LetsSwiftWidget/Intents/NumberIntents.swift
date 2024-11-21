@@ -17,6 +17,7 @@ struct NumberUpIntent: AppIntent, AudioPlaybackIntent {
 
   func perform() async throws -> some ProvidesDialog {
     SoundPlayer.shared.play(.click)
+    await UIImpactFeedbackGenerator(style: .rigid).impactOccurred() // 인텐트를 FG 에서 호출할 때만 햅틱 작동함
     try await Task.sleep(for: .seconds(2))
     singleNumber += 1
     widgetShowsResult = true
@@ -34,6 +35,7 @@ struct NumberDownIntent: AppIntent, AudioPlaybackIntent {
 
   func perform() async throws -> some ProvidesDialog {
     SoundPlayer.shared.play(.click)
+    await UIImpactFeedbackGenerator(style: .rigid).impactOccurred() // 인텐트를 FG 에서 호출할 때만 햅틱 작동함
     try await Task.sleep(for: .seconds(2))
     singleNumber -= 1
     widgetShowsResult = true

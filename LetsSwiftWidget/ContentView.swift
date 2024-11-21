@@ -25,10 +25,18 @@ struct ContentView: View {
       .font(.largeTitle)
       
       HStack {
-        Button("UP!", action: { singleNumber += 1 })
         Button("DOWN!", action: { singleNumber -= 1 })
+        Button("UP!", action: { singleNumber += 1 })
       }
-      .buttonStyle(.borderedProminent)
+      
+      HStack {
+        Button("(인텐트) DOWN!", intent: NumberDownIntent())
+        Button("(인텐트) UP!", intent: NumberUpIntent())
+      }
+    }
+    .buttonStyle(.borderedProminent)
+    .sensoryFeedback(trigger: singleNumber) { oldValue, newValue in
+      newValue > oldValue ? .increase : .decrease // 버튼과 인텐트 모두 작동 함!
     }
     .onChange(of: scenePhase) { _, newValue in
       if newValue == .background {
